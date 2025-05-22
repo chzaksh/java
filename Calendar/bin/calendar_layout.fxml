@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="TOP_CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="CalendarController"
+      style="-fx-padding: 20;">
+
+   
+    <Label text="Choose year and month, then click 'Show' to display the calendar."
+           style="-fx-font-size: 12px;" />
+
+   
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Year:" />
+        <ComboBox fx:id="yearCombo" prefWidth="80" />
+        <Label text="Month:" />
+        <ComboBox fx:id="monthCombo" prefWidth="100" />
+        <Button text="Show" onAction="#showCalendar" />
+    </HBox>
+
+    
+    <StackPane alignment="CENTER">
+        <GridPane fx:id="calendarGrid"
+                  hgap="5" vgap="5"
+                  style="-fx-padding: 10;" />
+    </StackPane>
+
+</VBox>
